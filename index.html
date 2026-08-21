@@ -1,19 +1,164 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/martim-cesar/martim-dourado.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Martim César — poeta, letrista e dramaturgo. Cinco livros, mais de uma dezena de álbuns e a obra dramática a partir do Quixote. Vencedor do Açorianos, da Califórnia da Canção e do Mario Quintana de Poesia." />
-    <meta name="theme-color" content="#07060a" />
-    <meta property="og:title" content="Martim César — Poeta · Letrista · Dramaturgo" />
-    <meta property="og:description" content="A obra reunida de Martim César: poesia, canção e teatro." />
-    <meta property="og:type" content="website" />
-    <title>Martim César — Poeta · Letrista · Dramaturgo</title>
-    <script type="module" crossorigin src="/martim-cesar/assets/index-C8HkfjVo.js"></script>
-    <link rel="stylesheet" crossorigin href="/martim-cesar/assets/index-B5tFS3BB.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0e0d0c" />
+  <meta name="description" content="Poemarte — poemas, canções e memórias de Martim César." />
+  <title>Poemarte — Martim César</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="poemarte.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a href="#top" class="brand" aria-label="Poemarte — início">
+      <span class="brand-mark">P</span>
+      <span class="brand-copy"><strong>POEMARTE</strong><small>Martim César</small></span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#destaque">Destaque</a>
+      <a href="#arquivo">Arquivo</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <button id="openSearch" class="icon-button" aria-label="Abrir busca">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-shell">
+        <div>
+          <p class="eyebrow">POEMARTE · MARTIM CÉSAR · 2010—2018</p>
+          <h1>Palavras que<br><em>atravessam o tempo.</em></h1>
+          <p class="hero-copy">Poemas, canções, lembranças e caminhos de <strong>Martim César</strong> reunidos em um só lugar. Um espaço para chegar sem pressa, escolher uma leitura e deixar que a palavra faça o resto.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#arquivo">Explorar poemas</a>
+            <button class="button button-ghost" id="randomPoem">Poema ao acaso</button>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <div>
+            <p class="eyebrow">ENTRE E FIQUE À VONTADE</p>
+            <h2>Há sempre um poema esperando.</h2>
+            <p>Percorra o acervo por ano, procure uma palavra, escolha uma imagem ou abra um poema ao acaso. Cada leitura guarda um pedaço de tempo, memória e mundo.</p>
+          </div>
+          <div class="hero-panel-list">
+            <div class="hero-panel-item"><span>Acervo</span><strong>2010—2018</strong></div>
+            <div class="hero-panel-item"><span>Poemas</span><strong id="heroPoetryCount">—</strong></div>
+            <div class="hero-panel-item"><span>Leitura</span><strong>Sem pressa</strong></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Estatísticas do acervo">
+      <article class="stat-card"><strong id="statPosts">—</strong><span>textos no acervo</span></article>
+      <article class="stat-card"><strong id="statPoetry">—</strong><span>poemas para descobrir</span></article>
+      <article class="stat-card"><strong id="statYears">—</strong><span>anos de memória</span></article>
+      <article class="stat-card"><strong id="statLatest">—</strong><span>último ano do acervo</span></article>
+    </section>
+
+    <section class="section" id="destaque">
+      <div class="section-shell">
+        <div class="section-head">
+          <div><p class="eyebrow">LEITURA EM DESTAQUE</p><h2>Um poema com presença.</h2></div>
+          <div class="section-index">01</div>
+        </div>
+        <article id="featuredPost" class="featured-card">
+          <div class="featured-visual"></div>
+          <div class="featured-content">
+            <span class="kicker">POEMA EM DESTAQUE</span>
+            <h3>Um verso para começar.</h3>
+            <p>Escolha uma leitura, entre no poema e fique o tempo que quiser.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section archive" id="arquivo">
+      <div class="section-shell">
+        <div class="section-head">
+          <div><p class="eyebrow">ACERVO COMPLETO</p><h2>Poemas, canções, memórias e caminhos.</h2></div>
+          <div class="section-index">02</div>
+        </div>
+
+        <div class="archive-toolbar">
+          <label class="toolbar-field">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span class="visually-hidden">Buscar</span>
+            <input id="inlineSearch" type="search" placeholder="Buscar por título, palavra ou verso…" autocomplete="off" />
+          </label>
+          <label class="toolbar-field"><span class="visually-hidden">Filtrar por ano</span><select id="yearFilter"><option value="all">Todos os anos</option></select></label>
+          <label class="toolbar-field"><span class="visually-hidden">Filtrar por tipo</span><select id="typeFilter"><option value="all">Todo o acervo</option><option value="poetry">Poesia</option><option value="other">Memória, música e arquivo</option></select></label>
+        </div>
+
+        <div class="archive-layout">
+          <aside class="timeline-panel">
+            <p class="timeline-title">Linha do tempo</p>
+            <div id="timeline" class="timeline"></div>
+            
+          </aside>
+
+          <div>
+            <div id="postsGrid" class="feed-grid" aria-live="polite"></div>
+            <div id="loadingState" class="loading-state"><span class="loader"></span><span>Abrindo o acervo…</span></div>
+            <button id="loadMore" class="button button-ghost load-more" hidden>Carregar mais poemas</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="section-shell">
+        <div class="section-head">
+          <div><p class="eyebrow">SOBRE O POEMARTE</p><h2>Um lugar para voltar às palavras.</h2></div>
+          <div class="section-index">03</div>
+        </div>
+        <div class="manifesto-grid">
+          <article class="manifesto-card">
+            <h3>Poesia para ser encontrada.<br>E reencontrada.</h3>
+            <p>Poemarte reúne poemas, canções, lembranças e registros de Martim César em um acervo feito para ser percorrido com calma, curiosidade e afeto.</p>
+          </article>
+          <div class="manifesto-text">
+            <p>Aqui, cada texto conserva sua data e sua história, formando uma travessia por diferentes momentos, temas e paisagens da obra.</p>
+            <p>Escolha pela imagem, pelo título, por um ano ou por uma palavra. Às vezes, basta abrir um poema ao acaso e ver onde ele leva.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-shell">
+      <div class="footer-brand">POEMARTE</div>
+      <div class="footer-meta"><span>Martim César</span><span>Poemas · canções · memórias</span><span>2010—2018</span></div>
+      <a class="footer-top" href="#top">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <dialog id="reader" class="reader">
+    <button id="closeReader" class="reader-close" aria-label="Fechar leitura">×</button>
+    <div class="reader-scroll">
+      <div id="readerLead" class="reader-lead"></div>
+      <div class="reader-shell">
+        <div class="reader-meta"><span id="readerDate"></span><span id="readerCategory"></span></div>
+        <h2 id="readerTitle"></h2>
+        <div id="readerContent" class="reader-content"></div>
+        <div class="reader-footer"><span>Martim César · Poemarte</span><span>Palavra, memória e tempo</span></div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="searchModal" class="search-modal">
+    <div class="search-head"><span>BUSCAR NO ACERVO</span><button id="closeSearch" aria-label="Fechar busca">×</button></div>
+    <input id="modalSearchInput" type="search" placeholder="Digite uma palavra, título ou verso" autocomplete="off" autofocus />
+    <div id="modalSearchResults" class="modal-results"></div>
+  </dialog>
+
+  <script src="poemarte.js"></script>
+</body>
 </html>
